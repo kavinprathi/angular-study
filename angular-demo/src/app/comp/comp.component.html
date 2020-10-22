@@ -1,0 +1,17 @@
+<div *ngFor="let arr of data">form for bio data
+   <p> {{arr.name}}</p>
+   <p>{{arr.id}}</p>
+   <p>{{arr.dob}}</p>
+   <p>{{arr.address}}</p>
+   <p>{{arr.city}}</p>
+    
+</div>
+<p>
+    <input placeholder='Name' [(ngModel)]='name' name='Name'>
+    <input placeholder='Id' [(ngModel)]='id' name='EmployerId'>
+    <input placeholder='DOB' [(ngModel)]='dob' name='DateOfBirth'>
+    <input placeholder='Address' [(ngModel)]='address' name='Address'>
+    <input placeholder='City' [(ngModel)]='city' name='City'>
+    <button type='button' onclick="add()">Add element in array</button>
+    
+</p>
