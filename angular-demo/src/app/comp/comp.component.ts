@@ -18,7 +18,7 @@ export class CompComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
     add()
     {
       this.data.push({
@@ -29,6 +29,6 @@ export class CompComponent implements OnInit {
         city:this.city
       })
     }
-  }
+  
 
 }
