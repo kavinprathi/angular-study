@@ -1,11 +1,11 @@
-<p>
-    <input placeholder='Name' [(ngModel)]='name' name='Name'>
-    <input placeholder='Id' [(ngModel)]='id' name='EmployerId'>
-    <input placeholder='DOB' [(ngModel)]='dob' name='DateOfBirth'>
-    <input placeholder='Address' [(ngModel)]='address' name='Address'>
-    <input placeholder='City' [(ngModel)]='city' name='City'>
-    <button type='button' (click)="add()">Add element in array</button>
-</p>
+<div class="aa">
+<p class='aa'>Name</p><p><input class='bb' placeholder='Name' [(ngModel)]='name' name='Name'></p>
+<p class='aa'>Employeer Id</p><p><input class='bb' placeholder='Id' [(ngModel)]='id' name='EmployerId'></p>
+<p class='aa'>Date of Birth</p><p><input class='bb' placeholder='DOB' [(ngModel)]='dob' name='DateOfBirth'></p>
+<p class='aa'>Address</p><p><input class='bb' placeholder='Address' [(ngModel)]='address' name='Address'></p>
+<p class='aa'>City</p><p><input class='bb' placeholder='City' [(ngModel)]='city' name='City'></p>
+<p><button type='button' (click)="add()">Add element in array</button></p>
+</div>
 <div *ngFor="let arr of data">form for bio data
     <p> {{arr.name}}</p>
     <p>{{arr.id}}</p>
