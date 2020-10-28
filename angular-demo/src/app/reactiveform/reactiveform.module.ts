@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveformComponent } from './reactiveform.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DemoComponent } from './demo/demo.component';
  
 const routes: Routes=[
   {
@@ -13,7 +14,7 @@ const routes: Routes=[
 
 
 @NgModule({
-  declarations: [ReactiveformComponent],
+  declarations: [ReactiveformComponent, DemoComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

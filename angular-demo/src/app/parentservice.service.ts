@@ -6,4 +6,9 @@ import { Injectable } from '@angular/core';
 export class ParentserviceService {
 
   constructor() { }
+  showtodaydate()
+  {
+    let ndate=new Date();
+    return ndate;
+  }
 }
