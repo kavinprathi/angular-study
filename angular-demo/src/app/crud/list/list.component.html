@@ -1,0 +1,25 @@
+<div class='container'>
+    <h1>list operation</h1>
+    <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a> 
+    <table class="table table=bordered">
+        <tr>
+            <th>fistname</th>
+            <th>lastname</th>
+            <th>password</th>
+            <th>email</th>
+            <th width='150px'>buttons</th>
+        </tr>
+        <tr *ngFor="let array of array">
+            <td>{{array.firstname}}</td>
+            <td>{{array.lastname}}</td>
+            <td>{{array.password}}</td>
+            <td>{{array.email}}</td>
+            <td>
+                <!-- <a href="#" [routerLink]="['/list',array.id]" class="btn btn-info"><td>View</td></a> -->
+                <a [routerLink]="['/crud/view',array._id]" class="btn btn-info"><td>View</td></a> 
+                <button type="button" (click)="deletearray(array._id)" class="btn btn-info">Delete</button> 
+            </td>
+        </tr>
+    </table>
+</div>
+<router-outlet></router-outlet>

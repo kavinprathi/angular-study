@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'compcomponent',
+    redirectTo: 'crud',
     pathMatch:'full'
   },
   {
@@ -28,9 +28,12 @@ const routes: Routes = [
   {
     path:'aa',
     loadChildren:() =>import('./anydesk/anydesk.module').then(n =>n.AnydeskModule)
+
+  },
+  {
+    path:'crud',
+    loadChildren:() =>import('./crud/crud.module').then(x=>x.CrudModule)
   }
-  
-  
 ];
 
 @NgModule({
