@@ -1,6 +1,7 @@
 <div class='container'>
     <h1>list operation</h1>
-    <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a> 
+    <!-- <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a>  -->
+     <a [routerLink]="['/crud/creat']" class="btn btn-info"><td>Create</td></a>
     <table class="table table=bordered">
         <tr>
             <th>fistname</th>
@@ -15,7 +16,8 @@
             <td>{{array.password}}</td>
             <td>{{array.email}}</td>
             <td>
-                <!-- <a href="#" [routerLink]="['/list',array.id]" class="btn btn-info"><td>View</td></a> -->
+                
+                <a [routerLink]="['/crud/edit',array._id]" class="btn btn-info"><td>Edit</td></a> 
                 <a [routerLink]="['/crud/view',array._id]" class="btn btn-info"><td>View</td></a> 
                 <button type="button" (click)="deletearray(array._id)" class="btn btn-info">Delete</button> 
             </td>

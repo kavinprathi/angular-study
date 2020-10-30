@@ -1,35 +1,57 @@
 <div class="container">
     <h1>Create New Post</h1>
   
-    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+    <a routerLink="/crud/creat" class="btn btn-primary">Back</a>
         
-    <form [formGroup]="form" (ngSubmit)="submit()">
+    <form [formGroup]="form" >
   
         <div class="form-group">
-            <label for="title">Title:</label>
+            <label for="firstname">firstname:</label>
             <input 
-                formControlName="title"
+                formControlName="firstname"
                 id="title" 
                 type="text" 
                 class="form-control">
-            <div *ngIf="f.title.touched && f.title.invalid" class="alert alert-danger">
-                <div *ngIf="f.title.errors.required">Title is required.</div>
+            <div *ngIf="f.firstname.touched && f.firstname.invalid" class="alert alert-danger">
+                <div *ngIf="f.firstname.errors.required">firstname is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Title:</label>
+            <input 
+                formControlName="lastname"
+                id="lastname" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.lastname.touched && f.lastname.invalid" class="alert alert-danger">
+                <div *ngIf="f.lastname.errors.required">lastname is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">password:</label>
+            <input 
+                formControlName="password"
+                id="password" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+                <div *ngIf="f.password.errors.required">password is required.</div>
             </div>
         </div>
   
         <div class="form-group">
-            <label for="body">Body</label>
+            <label for="email">email </label>
             <textarea 
-                formControlName="body"
-                id="body" 
+                formControlName="email"
+                id="email" 
                 type="text" 
                 class="form-control">
             </textarea>
-            <div *ngIf="f.body.touched && f.body.invalid" class="alert alert-danger">
-                <div *ngIf="f.body.errors.required">Body is required.</div>
+            <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                <div *ngIf="f.email.errors.required">email is required.</div>
             </div>
         </div>
   
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        <button class="btn btn-primary" (click)= "submit()" [disabled]="!form.valid">Submit</button>
     </form>
 </div>
