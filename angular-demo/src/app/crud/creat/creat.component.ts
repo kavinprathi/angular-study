@@ -70,6 +70,6 @@ console.log(this.id)
 
   }
   getvalue() {
-    this.form.patchValue({ firstname: this.c_array.firstname, lastname: this.c_array.lastname, password: this.c_array.password, email: this.c_array.email })
+    this.form.patchValue(this.c_array)
   }
 }

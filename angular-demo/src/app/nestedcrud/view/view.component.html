@@ -1,0 +1,62 @@
+<div class="container">
+    <h1>View array</h1>
+  
+    <a href="#" routerLink="/nested/view" class="btn btn-primary">Back</a>
+   <ng-container *ngFor="let var2 of array.student">
+    <div >
+        <strong>Register number:</strong>
+        <p>{{ array.Reg_No }}</p>
+    </div>
+
+    <div >
+        <strong>firstname:</strong>
+        <p>{{var2.FirstName }}</p>
+    </div>
+
+    <div>
+        <strong>lastname:</strong>
+        <p>{{ var2.LastName }}</p>
+    </div>
+
+    <div>
+        <strong>Date of Birth:</strong>
+        <p>{{ var2.DOB}}</p>
+    </div>
+
+    <div>
+        <strong>line 1:</strong>
+        <p>{{ var2.address.addressline1 }}</p>
+    </div>
+
+    <div>
+        <strong>line 2:</strong>
+        <p>{{ var2.address.addressline2}}</p>
+    </div>
+
+    <div>
+        <strong>city:</strong>
+        <p>{{ var2.address.City }}</p>
+    </div>
+
+    <div>
+        <strong>country:</strong>
+        <p>{{ var2.address.country }}</p>
+    </div>
+
+    <div>
+        <strong>pincode:</strong>
+        <p>{{ var2.address.Pincode }}</p>
+    </div>
+
+    <div>
+        <strong>department:</strong>
+        <p>{{ array.college.department }}</p>
+    </div>
+
+    <div>
+        <strong>name:</strong>
+        <p>{{array.college.name }}</p>
+    </div>
+</ng-container>
+</div>
+<router-outlet></router-outlet>

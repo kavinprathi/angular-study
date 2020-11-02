@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'crud',
+    redirectTo: 'nested',
     pathMatch:'full'
   },
   {
@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path:'crud',
     loadChildren:() =>import('./crud/crud.module').then(x=>x.CrudModule)
+  },
+  {
+    path:'nested',
+    loadChildren:() =>import('./nestedcrud/nestedcrud.module').then(z=> z.NestedcrudModule)
   }
 ];
 

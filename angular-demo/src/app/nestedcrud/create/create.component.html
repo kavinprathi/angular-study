@@ -1,0 +1,70 @@
+<div class="container">
+    <h1>Create Nested Form</h1>
+
+    <a routerLink="/nestedcrud/create" class="btn btn-primary">Back</a>
+
+    <form [formGroup]="form">
+        <div>
+
+            <label for="name">Register num</label>
+            <input type="text" class="form-control" id="name" formControlName="Reg_No">
+            <input type="checkbox" id="11" formControlName="verified">
+            <label id="11">verify</label>
+
+        </div>
+        <div formArrayName="student">
+            <ng-container *ngFor="let custom of stud.controls;let i=index">
+
+                <div [formGroupName]="i">
+                    <button (click)="appendstudentdetail()" >Append the details</button>
+                    <button (click)="deletestudentdetail(i)" *ngIf="i!=0">Delete the details</button>
+                    <legend> bio data </legend>
+
+                    <label for="name">firstname</label>
+                    <input type="text" class="form-control" id="name" formControlName="FirstName">
+        
+                    <label for="email">lastname</label>
+                    <input type="text" class="form-control" id="email" formControlName="LastName">
+        
+                    <label for="name">date of birth</label>
+                    <input type="text" class="form-control" id="name" formControlName="DOB">
+        
+                    <div formGroupName="address">
+                        <legend> address</legend>
+        
+                        <label for="name">line 1</label>
+                        <input type="text" class="form-control" id="name" formControlName="addressline1">
+        
+                        <label for="email">line 2</label>
+                        <input type="text" class="form-control" id="email" formControlName="addressline2">
+        
+                        <label for="email">city</label>
+                        <input type="text" class="form-control" id="email" formControlName="City">
+        
+                        <label for="email">country</label>
+                        <input type="text" class="form-control" id="email" formControlName="country">
+        
+                        <label for="email">pincode</label>
+                        <input type="number" class="form-control" id="email" formControlName="Pincode">
+        
+                    </div>
+                </div>
+            </ng-container>
+            
+        </div>
+            <div formGroupName="college">
+                <legend> college </legend>
+
+                <label for="name">department</label>
+                <input type="text" class="form-control" id="name" formControlName="department">
+                <label for="name">name</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+
+
+            </div>
+        
+
+        <button (click)="submit()">Submit</button>
+    </form>
+</div>
+<router-outlet></router-outlet>
