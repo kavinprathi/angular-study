@@ -8,6 +8,7 @@ import { CompComponent } from './comp/comp.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { SinglepageComponent } from './singlepage/singlepage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SinglepageComponent } from './singlepage/singlepage.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

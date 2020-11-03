@@ -8,20 +8,29 @@ import { NestedserviceService } from '../nestedservice.service';
 })
 export class ListComponent implements OnInit {
 
-  array:any = [];
+  array: any = [];
+  nestedserviceservices: any;
   constructor(public service: NestedserviceService) { }
 
   ngOnInit(): void {
-    this.service.get().subscribe((response) => {
-      this.array = response['data'];
-      console.table(response['data'])
-      console.log("Data=>",this.array);
+    this.initiate();
+  }
+ 
+  delete(id) {
+    this.service.delete(id).subscribe((res) => {
+      if (res['code'] == 200) {
+       this.initiate();
+      }
     })
   }
-  deletearray(id) {
-    this.service.delete(id).subscribe(res => {
-      // this.array = res['data'];
-      console.log('array was deleted');
+  initiate() {
+
+    this.service.get().subscribe((response) => {
+      if(response['code']==200){
+      this.array = response['data'];
+      console.table(response['data'])
+      console.log("Data=>", this.array);
+    }
     })
   }
 

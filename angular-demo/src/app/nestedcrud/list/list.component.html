@@ -1,10 +1,13 @@
-<div class='container'>
+<div class='container aa'>
+
     <h1>list operation</h1>
     <!-- <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a> KSKS -->
     <a [routerLink]="['/nested/create']" class="btn btn-info">
         <td>Create</td>
     </a>
-    <table class="table table=bordered">
+
+
+    <table class="table table-responsive container">
         <tr>
             <th>registernum</th>
             <th>fistname</th>
@@ -17,23 +20,26 @@
             <th>pincode</th>
             <th>department</th>
             <th>name</th>
-            <th width='250px'>buttons</th>
+            <th width='150px'>buttons</th>
         </tr>
         <ng-container *ngFor="let studentsdata of array">
-            <tr *ngFor="let biodata of studentsdata.student">
-                <td>{{studentsdata.Reg_No}}</td>
-                <td>{{biodata.FirstName}}</td>
-                <td>{{biodata.LastName}}</td>
-                <td>{{biodata.DOB}}</td>
-                <td>{{biodata.address.addressline1}}</td>
-                <td>{{biodata.address.addressline2}}</td>
-                <td>{{biodata.address.City}}</td>
-                <td>{{biodata.address.country}}</td>
-                <td>{{biodata.address.Pincode}}</td>
+            <tr class='container table table-responsive '>
+
+                <ng-container *ngFor="let biodata of studentsdata.student">
+                    <td>{{studentsdata.Reg_No}}</td>
+                    <td>{{biodata.FirstName}}</td>
+                    <td>{{biodata.LastName}}</td>
+                    <td>{{biodata.DOB}}</td>
+                    <td>{{biodata.address.addressline1}}</td>
+                    <td>{{biodata.address.addressline2}}</td>
+                    <td>{{biodata.address.City}}</td>
+                    <td>{{biodata.address.country}}</td>
+                    <td>{{biodata.address.Pincode}}</td>
+                </ng-container>
                 <td>{{studentsdata.college.department}}</td>
                 <td>{{studentsdata.college.name}}</td>
                 <td>
-    
+
                     <a [routerLink]="['/nested/edit',studentsdata._id]" class="btn btn-info">
                 <td>Edit</td></a>
                 <a [routerLink]="['/nested/view',studentsdata._id]" class="btn btn-info">
@@ -42,8 +48,8 @@
                 <button type="button" (click)="delete(studentsdata._id)" class="btn btn-info">Delete</button>
                 </td>
             </tr>
-        </ng-container> 
-       
+        </ng-container>
+
     </table>
 </div>
 <router-outlet></router-outlet>

@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'nested',
+    redirectTo:'crud',
     pathMatch:'full'
   },
   {

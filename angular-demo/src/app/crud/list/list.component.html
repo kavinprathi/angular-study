@@ -1,18 +1,19 @@
-<div class='container'>
+<div class='container '>
     <h1>list operation</h1>
     <!-- <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a> KSKS -->
     <a [routerLink]="['/crud/creat']" class="btn btn-info">
         <td>Create</td>
     </a>
-    <table class="table table=bordered">
+    <table class="table table-bordered table-hover table-striped">
         <tr>
             <th>fistname</th>
             <th>lastname</th>
-            <th>password</th>
+            <th>password </th>
             <th>email</th>
             <th width='150px'>buttons</th>   
         </tr>
         <tr *ngFor="let array of array">
+            
             <td>{{array.firstname}}</td>
             <td>{{array.lastname}}</td>
             <td>{{array.password}}</td>
@@ -28,5 +29,5 @@
             </td>
         </tr>
     </table>
-</div>
+</div>  
 <router-outlet></router-outlet>

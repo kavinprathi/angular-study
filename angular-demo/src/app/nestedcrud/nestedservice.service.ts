@@ -23,10 +23,10 @@ private apiUrl="http://localhost:8081";
       return this.httpClient.get(this.apiUrl+'/student/'+id);
     }
     edit(id,data){
-      return this.httpClient.get(this.apiUrl+'/updatadetails/'+id,data);
+      return this.httpClient.put(this.apiUrl+'/updatedetails/'+id,data);
     }
     delete(id){
-      return this.httpClient.get(this.apiUrl+'/deletestudent/'+id);
+      return this.httpClient.delete(this.apiUrl+'/deletestudent/'+id);
     }
    
 }

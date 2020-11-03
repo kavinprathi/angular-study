@@ -39,17 +39,17 @@ export class CreateComponent implements OnInit {
   }
   submit() {
     console.log(this.form.getRawValue())
-    // if (typeof this.id == 'undefined') {
-    //   this.serviceservices.create(this.form.value).subscribe(res => {
-    //     console.log('array');
-    //     this.router.navigateByUrl('/crud/list');
-    //   })
+     if (typeof this.id == 'undefined') {
+      this.serviceservices.create(this.form.value).subscribe(res => {
+        console.log('array');
+        this.router.navigateByUrl('/nested/list');
+      })
 
-    // } else {
-    //   this.serviceservices.edit(this.id, this.form.value).subscribe(res => {
-    //     this.router.navigateByUrl('/crud/list');
-    //   })
-    // }
+    } else {
+      this.serviceservices.edit(this.id, this.form.value).subscribe(res => {
+        this.router.navigateByUrl('/nested/list');
+      })
+    }
   }
   form_int() {
     this.form = new FormGroup({
