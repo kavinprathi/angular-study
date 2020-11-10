@@ -1,1 +1,7 @@
 <p>webworker works!</p>
+<input type="file" accept="image/*" (change)="changeListener($event)">
+<div *ngIf="image">
+<h2>result</h2>
+    <p>{{image?.replace("data:image/png;base64,","")}}</p>
+    <img src="{{image}}" alt="">
+</div>

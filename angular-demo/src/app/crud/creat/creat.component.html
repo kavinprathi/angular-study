@@ -1,51 +1,51 @@
-<div class="container">
-    <h1>Create New Post</h1>
+<div class="container dd"><br>
+    <h1 style="text-align: center;">Create New Post</h1>
   
-    <a routerLink="/crud/creat" class="btn btn-primary">Back</a>
+    <a routerLink="/crud/list" class="btn btn-primary">Back</a><br>
         
     <form [formGroup]="form" >
   
-        <div class="form-group">
+        <div class="form-group cc" >
             <label for="firstname">firstname:</label>
             <input 
                 formControlName="firstname"
                 id="title" 
                 type="text" 
-                class="form-control">
+                class="form-control bb">
             <div *ngIf="f.firstname.touched && f.firstname.invalid" class="alert alert-danger">
                 <div *ngIf="f.firstname.errors.required">firstname is required.</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group cc">
             <label for="lastname">Title:</label>
             <input 
                 formControlName="lastname"
                 id="lastname" 
                 type="text" 
-                class="form-control">
+                class="form-control bb">
             <div *ngIf="f.lastname.touched && f.lastname.invalid" class="alert alert-danger">
                 <div *ngIf="f.lastname.errors.required">lastname is required.</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group cc">
             <label for="password">password:</label>
             <input 
                 formControlName="password"
                 id="password" 
                 type="text" 
-                class="form-control">
+                class="form-control bb">
             <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
                 <div *ngIf="f.password.errors.required">password is required.</div>
             </div>
         </div>
   
-        <div class="form-group">
+        <div class="form-group cc">
             <label for="email">email </label>
             <textarea 
                 formControlName="email"
                 id="email" 
                 type="text" 
-                class="form-control">
+                class="form-control bb">
             </textarea>
             <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
                 <div *ngIf="f.email.errors.required">email is required.</div>
@@ -54,4 +54,5 @@
   
         <button class="btn btn-primary" (click)= "submit()" [disabled]="!form.valid">Submit</button>
     </form>
+    <br>
 </div>

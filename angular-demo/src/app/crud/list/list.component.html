@@ -1,33 +1,34 @@
-<div class='container '>
-    <h1>list operation</h1>
+<div class='container aa' >
+    <h1 style="text-align:center;">list operation</h1><br>
     <!-- <a href="#" routerLink='/crud/list' class="btn btn-success">create new array</a> KSKS -->
     <a [routerLink]="['/crud/creat']" class="btn btn-info">
-        <td>Create</td>
+      <i class="material-icons">cloud</i>
     </a>
-    <table class="table table-bordered table-hover table-striped">
-        <tr>
+    <table class="table w3-blue ">
+        <tr style="text-align: justify;">
             <th>fistname</th>
             <th>lastname</th>
             <th>password </th>
             <th>email</th>
-            <th width='150px'>buttons</th>   
+            <th width='200px'>Actions</th>
         </tr>
         <tr *ngFor="let array of array">
-            
+
             <td>{{array.firstname}}</td>
             <td>{{array.lastname}}</td>
             <td>{{array.password}}</td>
             <td>{{array.email}}</td>
             <td>
-
-                <a [routerLink]="['/crud/edit',array._id]" class="btn btn-info">
+                <div class="btn-group btn-xs">
+                    <a [routerLink]="['/crud/edit',array._id]" class="btn btn-primary btn-xs">
             <td>Edit</td></a>
-            <a [routerLink]="['/crud/view',array._id]" class="btn btn-info">
-                <td>View</td>
+            <a [routerLink]="['/crud/view',array._id]" class="btn btn-success btn-xs"><i class="material-icons">home</i>
+                
             </a>
-            <button type="button" (click)="deletearray(array._id)" class="btn btn-info">Delete</button>
-            </td>
-        </tr>
-    </table>
-</div>  
+            <a (click)="deletearray(array._id)" ><i class="material-icons"> cloud</i></a>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <router-outlet></router-outlet>

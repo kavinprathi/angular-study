@@ -1,0 +1,26 @@
+.aa{
+    background-color: darkgray;
+   }
+   .bb{
+       padding:0px ;
+     
+
+   }
+.cc{
+    margin:0px 30px;
+}
+.dd
+     {
+        background-color: rgb(241, 19, 19);
+        animation-name: example;
+        animation-duration: 40s;
+      }
+      
+      @keyframes example {
+        0%   {background-color: red;}
+        25%  {background-color: rgba(243, 243, 51, 0.877);}
+        50%  {background-color: rgb(9, 9, 196);}
+        100% {background-color: green;}
+      }
+
+   
